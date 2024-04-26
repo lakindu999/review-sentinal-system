@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAS Technology Services</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/fontawesome-all.min.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/iofrm-style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/iofrm-theme2.css}">
+<link rel='stylesheet'
+	href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+<link rel="stylesheet" th:href="@{assets/user/css/style.css}">
+</head>
+<body>
+	<div class="form-body">
+		<div class="website-logo">
+			<a href="index.html">
+				<div class="logo">
+			</a>
+		</div>
+		<div class="row">
+			<div class="img-holder">
+				<div class="bg"></div>
+				<div class="info-holder"></div>
+			</div>
+			<div class="form-holder" style="margin-top: -250px;">
+				<div class="form-content">
+					<div class="form-items">
+						<h3>Enter Username & Password</h3>
+						<div class="page-links">
+							<a th:href="@{'/signin'}" class="active">Login</a><a
+								th:href="@{'/signup'}">Register</a>
+						</div>
+						<form action="userLogin"  method="post" >
+							<th:block th:if="${param.error}">
+								<h5 class="fw-bold text-danger text-center" id="errorMessage">
+									Incorrect Email or Password. Please try again.
+									</h6>
+							</th:block>
+							<th:block th:if="${param.logout}">
+								<h5 class="fw-bold text-danger text-center" id="logoutMessage">
+									You have been Successfully Logged Out.
+									</h6>
+							</th:block>
+							<input class="form-control" type="text" name="username"
+								id="email" placeholder="E-mail Address" required> <input
+								class="form-control" type="password" name="password"
+								id="password" placeholder="Password" required>
+							<div class="form-button">
+								<button type="submit" id="signup-button" class="ibtn">Login</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:src="@{assets/user/js/jquery.min.js}"></script>
+	<script th:src="@{assets/user/js/popper.min.js}"></script>
+	<script th:src="@{assets/user/js/bootstrap.min.js}"></script>
+	<script th:src="@{assets/user/js/main.js}"></script>
+	<script
+		src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<script th:src="@{assets/user/js/script.js}"></script>
+</body>
+</html>

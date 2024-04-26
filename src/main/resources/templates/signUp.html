@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAS Technology Services</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/fontawesome-all.min.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/iofrm-style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{assets/user/css/iofrm-theme2.css}">
+</head>
+<body>
+	<div class="form-body">
+		<div class="website-logo">
+			<a href="index.html"> </a>
+		</div>
+		<div class="row">
+			<div class="img-holder">
+				<div class="bg"></div>
+				<div class="info-holder"></div>
+			</div>
+			<div class="form-holder"  style="margin-top: -10px; margin-left: -10px;">
+				<div class="form-content">
+					<div class="form-items">
+						<h3>User Registration</h3>
+						<div class="page-links">
+							<a th:href="@{'/signin'}">Login</a><a class="active"
+								th:href="@{'/signup'}">Register</a>
+						</div>
+						<form action="saveUser" method="post">
+
+							<th:block th:if="${session.msg}">
+								<p class="text-center fw-bold text-success" id="successMessage">
+									[[${session.msg}]]</p>
+							</th:block>
+
+							<th:block th:if="${session.msgError}">
+								<p class="text-center fw-bold text-danger" id="existMessage">
+									[[${session.msgError}]]</p>
+							</th:block>
+
+							<input class="form-control" type="text" name="name" id="name" placeholder="Full Name" required> 
+								<input class="form-control" type="email" name="email" id="email" placeholder="E-mail Address" required> 
+								<input class="form-control" type="number" name="mobile" id="mobile" placeholder="Mobile Number" required>
+								<input class="form-control" type="password" name="password" id="password" placeholder="Password" required>
+							<div class="form-button">
+								<button type="submit" id="signup-button" class="ibtn">Register</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:src="@{assets/user/js/jquery.min.js}"></script>
+	<script th:src="@{assets/user/js/popper.min.js}"></script>
+	<script th:src="@{assets/user/js/bootstrap.min.js}"></script>
+	<script th:src="@{assets/user/js/main.js}"></script>
+</body>
+</html>

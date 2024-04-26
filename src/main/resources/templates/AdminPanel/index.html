@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>MAS Technology Services</title>
+<!-- Favicon icon -->
+<link rel="icon" type="image/png" sizes="16x16" />
+<!-- Custom Stylesheet -->
+<!-- <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css" /> -->
+<link rel="stylesheet" href="../../../assets/admin/css/style.css" />
+</head>
+
+<body>
+
+	<div id="main-wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-12">
+						<div class="header-content">
+							<div class="header-left">
+								<div class="brand-logo">
+									<a href="index.html" class=""> <span>MAS Technology
+											Services</span>
+									</a>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidebar">
+			<div class="menu">
+				<ul>
+					<li><a th:href="@{'/admin/'}" data-toggle="tooltip"
+						data-placement="right" title="Manage Users"> <span><i
+								class="icofont-ui-settings"></i></span>
+					</a></li>
+					<li><a th:href="@{'/admin/submits'}" data-toggle="tooltip"
+						data-placement="right" title="Mange Submissions"><span><i
+								class="icofont-edit-alt"></i></i></span> </a> </a></li>
+
+					<li><a href="/logout" data-toggle="tooltip"
+						data-placement="right" title="Log Out"><span><i
+								class="icofont-logout"></i></span> </a> </a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-12 col-xl-12">
+						<div class="card">
+							<div class="container-fluid pt-2 px-2">
+								<div class="card-header" style="float: left;">
+									<h4 class="card-title">Manage users</h4>
+								</div>
+								<div class="card-header" style="float: right;">
+									<a th:href="@{'/admin/addUser'}" class="btn btn btn-primary btn-rounded"> Add User</a>
+								</div>
+								<div style="clear: both;"></div>
+							</div>
+
+
+							<div class="card-body">
+								<div class="table-responsive transaction-table">
+									<table class="table table-striped responsive-table">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Mobile</th>
+												<th>Password</th>
+												<th class="text-right">Action</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr th:each="user: ${user}">
+												<td th:text="${user.name}"></td>
+												<td th:text="${user.email}"></td>
+												<td th:text="${user.mobile}"></td>
+												<td th:text="${user.password}"></td>
+												<td class="text-right"><a class="mr-3"
+													th:href="@{/admin/editUser/{id}(id=${user.id})}">EDIT</a>
+													&nbsp;&nbsp;&nbsp; <a
+													th:href="@{/admin/deleteUser/{id}(id=${user.id})}">DELETE</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../assets/admin/vendor/jquery/jquery.min.js"></script>
+	<script
+		src="../../assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="../../assets/admin/vendor/basic-table/jquery.basictable.min.js"></script>
+	<script src="../../assets/admin/js/plugins/basic-table-init.js"></script>
+
+	<script
+		src="../../assets/admin/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../../assets/admin/js/plugins/perfect-scrollbar-init.js"></script>
+
+	<script src="../../assets/admin/vendor/apexchart/apexcharts.min.js"></script>
+	<script src="../../assets/admin/js/dashboard.js"></script>
+	<script src="../../assets/admin/js/plugins/apex-price.js"></script>
+
+	<script src="../../assets/admin/vendor/slick/slick.min.js"></script>
+	<script src="../../assets/admin/js/plugins/slick-init.js"></script>
+	<script src="../../assets/admin/js/scripts.js"></script>
+</body>
+</html>
