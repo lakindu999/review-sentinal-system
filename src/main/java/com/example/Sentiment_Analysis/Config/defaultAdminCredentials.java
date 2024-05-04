@@ -25,7 +25,7 @@ public class defaultAdminCredentials {
 		User defaultUser = new User();
 		defaultUser.setId(1);
 		defaultUser.setName("Mas Holding");
-		defaultUser.setEmail("masholding@gmail.com");
+		defaultUser.setEmail("admin@masholdings.com");
 		defaultUser.setMobile("0112751489");
 		defaultUser.setPassword(passwordEncoder.encode("Mas"));
 		defaultUser.setRole("ROLE_ADMIN");

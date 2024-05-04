@@ -1,1 +1,3 @@
-[2024-04-27 08:45:20,008] http-nio-8080-exec-7 com.example.Sentiment_Analysis.Controller.AdminController 71 INFO   - Displayed Create user: masholding@gmail.com
+[2024-05-02 11:08:31,131] http-nio-8080-exec-8 com.example.Sentiment_Analysis.Controller.AdminController 71 INFO   - Displayed Create user: admin@masholdings.com
+[2024-05-02 11:09:55,755] http-nio-8080-exec-7 com.example.Sentiment_Analysis.Controller.AdminController 85 INFO   - User saved successfully: {}
+[2024-05-02 11:12:08,958] http-nio-8080-exec-5 com.example.Sentiment_Analysis.Controller.AdminController 142 INFO   - User deleted successfully with ID: {}
